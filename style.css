@@ -1,0 +1,173 @@
+.square-box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.ball {
+    position: absolute;
+    border-radius: 50%;
+    /* background-color: red; */
+    width: 50%;
+    height: 50%;
+    box-shadow: inset 1px 1px 2px rgba(3, 0, 0, 0.337),inset -1px -1px 2px rgba(3, 0, 0, 0.337),inset -1px 1px 2px rgba(3, 0, 0, 0.337),inset 1px -1px 2px rgba(3, 0, 0, 0.337),
+    inset 2px 2px 4px rgba(16, 0, 0, 0.376),inset -2px -2px 4px rgba(16, 0, 0, 0.376),inset -2px 2px 4px rgba(16, 0, 0, 0.376),inset 2px -2px 4px rgba(16, 0, 0, 0.376);
+}
+.vibrate{
+    animation: vibrate .1s infinite;
+}
+@keyframes vibrate {
+    0%{
+        transform: translateX(1px);
+    }
+    25%{
+        transform: translateY(1px);
+    }
+    75%{
+        transform: translateX(-1px);
+    }
+    100%{
+        transform: translateY(-1px);
+    }
+    0%{
+        transform: translateX(1px);
+    }
+}
+.ball1{
+    z-index: 1;
+    background-color: red;
+}
+.ball2{
+    left:40%;
+    z-index: 2;
+    background-color: green;
+}
+.ball4{
+    bottom: 40%;
+    z-index: 3;
+    background-color: rgb(255, 0, 136);
+}
+.ball3{
+    right: 40%;
+    z-index: 4;
+    background-color: blue;
+}
+.translatex{
+    animation: translatex 1s ;
+}
+@keyframes translatex {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(220%);
+        transform: scale(0px);
+    }
+    
+}
+.translatey{
+    animation: translatey 1s ;
+}
+@keyframes translatey {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(220%);
+        transform: scale(0px);
+    }
+    
+}
+.translate-y{
+    animation: translate-y 1s ;
+}
+@keyframes translate-y {
+    0%{
+        transform: translateY(0px);
+    }
+    100%{
+        transform: translateY(-220%);
+        transform: scale(0px);
+    }
+    
+}
+.translate-x{
+    animation: translate-x 1s ;
+}
+@keyframes translate-x {
+    0%{
+        transform: translateX(0px);
+    }
+    100%{
+        transform: translateX(-220%);
+        transform: scale(0px);
+    }
+    
+}
+
+
+
+.player{
+    margin-top: 5vh;
+    display: flex;
+    width: min(70vw,60vh);
+    display: flex;
+    justify-content: space-between;
+    
+    /* padding: 10%; */
+    /* cursor:not-allowed; */
+    
+}
+
+
+
+.btn{
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid rgb(17, 15, 15);
+    background-color: rgb(151, 146, 146);
+    border-radius: 50%;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: glow 2s infinite; */
+    /* box-shadow: 2px 2px 4px white,-2px 2px 4px white,2px -2px 4px white,-2px -2px 4px white,1px 1px 1px white,-1px 1px 1px white,1px -1px 1px white,-1px -1px 1px white,
+        4px 4px 4px white,-4px 4px 4px white,4px -4px 4px white,-4px -4px 4px white,
+        6px 6px 6px white,-6px 6px 6px white,6px -6px 6px white,-6px -6px 6px white,
+        25px 25px 25px white,-25px 25px 25px white,25px -25px 25px white,-25px -25px 25px white; */
+}
+.btn:before{
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color:rgb(63, 60, 60);
+    z-index: 10;
+    border: 1px solid black;
+    
+}
+@keyframes glow {
+    0%{
+        box-shadow: 1px 1px 1px white,-1px 1px 1px white,1px -1px 1px white,-1px -1px 1px white;
+    }
+    100%{
+        box-shadow: 4px 4px 4px white,-4px 4px 4px white,4px -4px 4px white,-4px -4px 4px white;
+    }
+    0%{
+        box-shadow: 1px 1px 1px white,-1px 1px 1px white,1px -1px 1px white,-1px -1px 1px white;
+    }
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: rgb(34, 0, 255);
+}

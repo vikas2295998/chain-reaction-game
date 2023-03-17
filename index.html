@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *{
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(23, 10, 1, 0.96);
+
+        }
+        .game-area{
+            width: min(70vh,90vw);
+            height: min(70vh,90vw);
+            /* border: 2px solid red; */
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(8,1fr);
+            grid-template-rows: repeat(8,1fr);
+            grid-column-gap: 5px;
+            grid-row-gap: 5px;
+            transition: all 2 ease;
+            position: relative;
+            background-color: #5b5b5b;
+        }
+
+        .box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* font-size: 1rem; */
+            background-color:white;
+            cursor: pointer;
+            position: relative;
+            transition: transform 2s;
+            background-color: #c3c3c3;
+            color: #5b5b5b;
+            box-shadow: 2px 2px 5px #7a7a7a, inset 0 0 10px #a8a8a8;
+            /* box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.53),inset -2px -2px 3px rgba(0, 0, 0, 0.53),inset -2px 2px 3px rgba(0, 0, 0, 0.53),inset 2px -2px 3px rgba(0, 0, 0, 0.53); */
+        }
+
+        .box{
+            transition: all 2 ease;
+        }
+        
+
+/* .ball:hover {
+  width: 300px;
+  height: 300px;
+} */
+        .red{
+            color:red;
+        }
+        
+        .message{
+            position: absolute;
+            width: min(40vw,40vh);
+            border: 3px solid red;
+            background-color: rgba(55, 17, 23, 0.784);
+            color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 10px;
+            padding: 1rem;
+            font-family: Arial, Helvetica, sans-serif;
+            z-index: 100;
+            display: none;
+        }
+        .message p{
+            font-size:1.5rem;
+            font-weight: 700;
+            text-shadow: 1px 1px 1px white;
+        }
+        .message a{
+            /* font-weight: 800; */
+            padding: 5px;
+            margin-top:1rem;
+            font-size:1.5rem;
+            font-weight: 700;
+            text-decoration: none;
+            border: 3px solid green;
+            color: green;
+            border-radius: 3px;
+            cursor: pointer;
+            text-shadow: 1px 1px  white;
+            
+        }
+        .link:hover{
+           text-shadow: none;
+            background-color: green;
+            color: white;
+        }
+        h1{
+            color: aliceblue;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 5px rgb(224, 52, 52);
+        }
+    </style>
+</head>
+<body>
+    <h1>chain reaction game!!!</h1>
+    <div class="message"><p id="massage">player one is winner</p>
+    <a class="link" href="index.html"> play again!!!</a>
+    </div>
+
+    <div class="game-area" id="game">
+    </div>
+    <div class="player">
+        <div class="btn " ></div>
+        <div class="btn" ></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
